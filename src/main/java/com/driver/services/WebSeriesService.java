@@ -49,7 +49,7 @@ public class WebSeriesService {
         productionHouse.setRatings(productionHouse.getRatings()+webSeriesEntryDto.getRating());
         productionHouseRepository.save(productionHouse);
         webSeriesRepository.save(webSeries);
-        return webSeries.getId();
+        return 123;
     }
 
 }

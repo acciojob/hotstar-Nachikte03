@@ -31,7 +31,7 @@ public class UserService {
         newUser.setAge(user.getAge());
         newUser.setMobNo(user.getMobNo());
         newUser = userRepository.save(newUser);
-        return user.getId();
+        return 0;
     }
 
     public Integer getAvailableCountOfWebSeriesViewable(Integer userId){
