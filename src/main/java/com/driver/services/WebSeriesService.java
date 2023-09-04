@@ -31,8 +31,8 @@ public class WebSeriesService {
             return 0;
         }
         ProductionHouse productionHouse = optionalProductionHouse.get();
-        List<WebSeries> webSeriesList = productionHouse.getWebSeriesList();
-        for(WebSeries webSeries:webSeriesList){
+        List<WebSeries> kantabai = productionHouse.getWebSeriesList();
+        for(WebSeries webSeries:kantabai){
             if(webSeries.getSeriesName().equals(webSeriesEntryDto.getSeriesName())){
                 throw new Exception("Series is already present");
             }
@@ -43,6 +43,7 @@ public class WebSeriesService {
         webSeries.setRating(webSeriesEntryDto.getRating());
         webSeries.setProductionHouse(productionHouse);
         webSeries.setSubscriptionType(webSeriesEntryDto.getSubscriptionType());
+        kantabai.add(webSeries);
 
 
         productionHouse.setRatings(productionHouse.getRatings()+webSeriesEntryDto.getRating());
